@@ -1,37 +1,30 @@
-## Welcome to GitHub Pages
+# HackLabs
+Labs for hacking using docker.
 
-You can use the [editor on GitHub](https://github.com/greenmind-sec/hacklabs/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Install hacklabs
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
-
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
+### Build project
+For install hacklabs.
+```sh
+docker-compose build --no-cache
 ```
+[![asciicast](https://asciinema.org/a/JfI3giuTl2xhqDzALJmaoYDcd.png)](https://asciinema.org/a/JfI3giuTl2xhqDzALJmaoYDcd)
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Up Lab
+Start labs
+```sh
+sudo docker-compose up -d
+```
+[![asciicast](https://asciinema.org/a/ggSwhfCaaBWtu8EleqXnaU4uN.png)](https://asciinema.org/a/ggSwhfCaaBWtu8EleqXnaU4uN)
 
-### Jekyll Themes
+Or using **script.sh** and redirect domain.
+```sh
+sudo ./start.sh
+```
+[![asciicast](https://asciinema.org/a/KWCa7SAnFgKxbIQPH5LRB1NzI.png)](https://asciinema.org/a/KWCa7SAnFgKxbIQPH5LRB1NzI)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/greenmind-sec/hacklabs/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+### Stop Lab
+Stop project
+```sh
+sudo ./stop.sh
+```
