@@ -28,3 +28,13 @@ Stop project
 ```sh
 sudo ./stop.sh
 ```
+
+### Check Domain
+Check domain ip.
+
+Domain used is **hack.me**.
+```sh
+cat /etc/hosts
+```
+
+[![asciicast](https://asciinema.org/a/GTVCzRIGfmhptW1jX070livBJ.png)](https://asciinema.org/a/GTVCzRIGfmhptW1jX070livBJ)
