@@ -19,14 +19,14 @@ sudo docker-compose up -d
 
 Or using **script.sh** and redirect domain.
 ```sh
-sudo ./start.sh
+sudo python3 hacklabs.py
 ```
 [![asciicast](https://asciinema.org/a/KWCa7SAnFgKxbIQPH5LRB1NzI.png)](https://asciinema.org/a/KWCa7SAnFgKxbIQPH5LRB1NzI)
 
 ### Stop Lab
 Stop project
 ```sh
-sudo ./stop.sh
+sudo python3 hacklabs.py
 ```
 
 ### Check Domain
