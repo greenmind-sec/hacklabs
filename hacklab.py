@@ -134,14 +134,94 @@ def menu1():
 def startLabs():
     print("Iniciando Labs")
     subprocess.check_output("docker-compose up -d".split())
+    # -------------------------------------------------------------------------------------- ADD /etc/hosts
+    # Opening JSON file
+    with open('data.json') as json_file:
+        data = json.load(json_file)
+
+        #TODO arrumar loop
+        for lfi in data['lfi']:
+            add_host(lfi['type'],lfi['address'],lfi['names'])
+
+        for rh in data['rh']:
+            add_host(rh['type'],rh['address'],rh['names'])
+
+        for brute_force in data['brute_force']:
+            add_host(brute_force['type'],brute_force['address'],brute_force['names'])
+
+        for heartblend in data['heartblend']:
+            add_host(heartblend['type'],heartblend['address'],heartblend['names'])
+
+        for juice_shop in data['juice_shop']:
+            add_host(juice_shop['type'],juice_shop['address'],juice_shop['names'])
+
+        for dvwa in data['dvwa']:
+            add_host(dvwa['type'],dvwa['address'],dvwa['names'])
+
+        for dsvw in data['dsvw']:
+            add_host(dsvw['type'],dsvw['address'],dsvw['names'])
+
+        for webgoat in data['webgoat']:
+            add_host(webgoat['type'],webgoat['address'],webgoat['names'])
+    # -------------------------------------------------------------------------------------- ADD /etc/hosts
+
     menu_actions['main_menu']()
     sys.exit()
 
 def stopLabs():
     print("Parando Labs")
     subprocess.check_output("docker-compose down".split())
+    # -------------------------------------------------------------------------------------- ADD /etc/hosts
+    # Opening JSON file
+    with open('data.json') as json_file:
+        data = json.load(json_file)
+
+        #TODO arrumar loop
+        for lfi in data['lfi']:
+            del_host(lfi['address'])
+
+        for rh in data['rh']:
+            del_host(rh['address'])
+
+        for brute_force in data['brute_force']:
+            del_host(brute_force['address'])
+
+        for heartblend in data['heartblend']:
+            del_host(heartblend['address'])
+
+        for juice_shop in data['juice_shop']:
+            del_host(juice_shop['address'])
+
+        for dvwa in data['dvwa']:
+            del_host(dvwa['address'])
+
+        for dsvw in data['dsvw']:
+            del_host(dsvw['address'])
+
+        for webgoat in data['webgoat']:
+            del_host(webgoat['address'])
+    # -------------------------------------------------------------------------------------- ADD /etc/hosts
     menu_actions['main_menu']()
     sys.exit()
+
+# ------------------------------------------------------------------------------------------------------- ADD/REMOVE /etc/hosts
+# importing the module
+import json
+from python_hosts import Hosts, HostsEntry
+hosts = Hosts(path='/etc/hosts')
+
+def add_host(type,address,names):
+    new_entry = HostsEntry(entry_type=type, address=address, names=[names])
+    hosts.add([new_entry])
+    hosts.write()
+
+def del_host(address):
+    hosts.remove_all_matching(address=address)
+    hosts.write()
+
+
+
+# ------------------------------------------------------------------------------------------------------- ADD/REMOVE /etc/hosts
 
 # =======================
 # DEFINIÇÃO DE MENUS

@@ -19,6 +19,25 @@ services:
       app_net:
         ipv4_address: 172.18.18.10
 
+  labs_rh:
+    build: "./LABS/lfi-labs/"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 50M
+        reservations:
+          cpus: '0.25'
+          memory: 20M
+    ports:
+      - 82:80
+    hostname: rh.hack.me
+    networks:
+      rh_network:
+        ipv4_address: 172.18.42.10
+
+
+
   labs_bruteforce:
     build: "./LABS/Lab-BruteForce-Linux"
     deploy:
@@ -216,4 +235,14 @@ networks:
       driver: default
       config:
       - subnet: 172.18.18.0/24
+        #gateway: 172.18.18.1
+
+  rh_network:
+    driver: bridge
+    driver_opts:
+      com.docker.network.enable_ipv6: "false"
+    ipam:
+      driver: default
+      config:
+      - subnet: 172.18.42.0/24
         #gateway: 172.18.18.1

@@ -1,0 +1,61 @@
+
+{
+
+  "lfi": [
+    {
+      "type":"ipv4",
+      "address": "172.18.18.10",
+      "names": "lfi.hack.me"
+
+    }
+  ],
+  "rh": [
+      {
+        "type":"ipv4",
+        "address": "172.18.42.10",
+        "names": "rh.hack.me"
+      }
+  ],
+  "brute_force": [
+      {
+        "type":"ipv4",
+        "address": "172.18.18.11",
+        "names": "bruteforce.hack.me"
+      }
+  ],
+  "heartblend": [
+      {
+        "type":"ipv4",
+        "address": "172.18.18.12",
+        "names": "heartblend.hack.me"
+      }
+  ],
+  "juice_shop": [
+      {
+        "type":"ipv4",
+        "address": "172.18.18.13",
+        "names": "juice_shop.hack.me"
+      }
+  ],
+  "dvwa": [
+      {
+        "type":"ipv4",
+        "address": "172.18.18.14",
+        "names": "dvwa.hack.me"
+      }
+  ],
+  "dsvw": [
+      {
+        "type":"ipv4",
+        "address": "172.18.18.15",
+        "names": "dsvw.hack.me"
+      }
+  ],
+  "webgoat": [
+      {
+        "type":"ipv4",
+        "address": "172.18.18.16",
+        "names": "webgoat.hack.me"
+      }
+  ]
+}
