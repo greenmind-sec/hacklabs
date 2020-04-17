@@ -40,7 +40,7 @@ msg_thc='''
      ,CLLCCCC1  LCCCC1 GCCC.CLCCL
        ,fCCCCCCCf;LCLC.CCC;CLCG    ,GCCCCCCLCCG.
           .GCCCCCCCC1GC CG1LG :GCCCCCGCCCCt,
-    .............. HackLabs 0.2 ..............
+    .............. HackLabs 0.3 ..............
 '''
 #--
 #MSG Menu Principal
