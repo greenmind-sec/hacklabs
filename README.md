@@ -3,6 +3,24 @@ Labs for hacking using docker.
 
 ## Install hacklabs
 
+### Install requisites
+Install Docker.
+```sh
+https://docs.docker.com/engine/install/
+```
+> Install docker in ubuntu: https://docs.docker.com/engine/install/ubuntu/
+
+Install pip3 for python.
+```sh
+apt-get install python3-pip
+```
+> Using apt install
+
+Install libs **docker-compose** and **python_hosts**.
+```sh
+pip3 install -r requirements.txt
+```
+
 ### Build project
 For install hacklabs.
 ```sh
